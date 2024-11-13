@@ -1,0 +1,98 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the header and navigation menu */
+header {
+background-color: #15c51b;
+    color: #0d00c0;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* Align items to both sides */
+    align-items: center;
+}
+
+/* Style for the navigation menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    /* Adjust width to give space for the button */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+/* Centered container for the image */
+.image-gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* Image gallery styled to show one image at a time */
+.image-gallery {
+    display: flex;
+    overflow: hidden;
+    width: 600px;
+    /* Increased width */
+    height: 290px;
+    /* Increased height */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+
+/* Uniform image size */
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Make the current image visible */
+.image-gallery img.visible {
+    opacity: 1;
+}
+
+/* Circular buttons for navigation */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.nav-buttons button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.nav-buttons button.active {
+    background-color: #333;
+}

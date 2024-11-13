@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Signup</title>
+    <style>
+        /* donor.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body.signup-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFD700, #FF6347);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-box {
+    width: 350px;
+    margin: auto;
+}
+/* 
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    color: white;
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c0c0c0;
+}
+
+.info-text {
+    color: lightgray;
+    font-size: 14px;
+    margin-bottom: 15px;
+} */
+
+    </style>
+</head>
+<body class="signup-page">
+    <div class="container">
+        <div class="form-box">
+            <h2>Food Donor Signup</h2>
+            <form id="donorForm" onsubmit="return validateForm()">
+                <label for="donor-name">Full Name:</label>
+                <input type="text" id="donor-name" name="donor-name" placeholder="Enter your full name">
+
+                <label for="donor-email">Email:</label>
+                <input type="email" id="donor-email" name="donor-email" placeholder="Enter your email">
+
+                <label for="donor-password">Password:</label>
+                <input type="password" id="donor-password" name="donor-password" placeholder="Enter your password">
+
+                <!-- Photo ID upload -->
+                <label for="photo-id">Upload Photo ID:</label>
+                <input type="file" id="photo-id" name="photo-id" accept="image/*">
+
+                <p class="info-text">Your ID will be reviewed by our admin team. Verification is required to log in.</p>
+
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+   <script>
+    // account_app.js
+
+function validateForm() {
+    const name = document.getElementById('donor-name').value;
+    const email = document.getElementById('donor-email').value;
+    const password = document.getElementById('donor-password').value;
+    const photoId = document.getElementById('photo-id').files[0];
+
+    if (!name || !email || !password || !photoId) {
+        alert("All fields, including photo ID, are required.");
+        return false;
+    }
+
+    // Simulate form submission and show verification message
+    alert("Signup successful. Your ID will be verified by the admin.");
+    return true; // replace this with actual form submission handling
+}
+
+   </script>
+</body>
+</html>
